@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 sal = pd.read_csv('data/sal.csv',header=0, index_col=None)
-X = sal[['YearsExperience']]
-y = sal['Salary']
+X = sal[['x']]
+y = sal['y']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=10)
 
