@@ -20,6 +20,6 @@ y_predict= lm.predict(X_test)
 mse = mean_squared_error(y_predict,y_test)
 print('MSE :', round(mse,2))
 
-from sklearn.externals import joblib
+from sklearn import joblib
 filename = 'model/sal_model.pkl'
 joblib.dump(lm, filename)
