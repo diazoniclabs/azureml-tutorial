@@ -1,6 +1,6 @@
 #!flask/bin/python
 from flask import Flask, jsonify
-from sklearn.externals import joblib
+import joblib
 
 
 filename = 'model/sal_model.pkl'
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Stackoverflow Salary Predictor"
+    return "Salary Predictor"
 
 @app.route('/sal/<int:x>', methods=['GET'])
 def predict(x):
